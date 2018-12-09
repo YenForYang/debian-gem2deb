@@ -1,0 +1,68 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck
+dpkg-buildpackage: info: source package gem2deb
+dpkg-buildpackage: info: source version 0.40
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Antonio Terceiro <terceiro@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+dpkg-source: info: using options from gem2deb/debian/source/options: --tar-ignore=.git
+ fakeroot debian/rules clean
+dh clean
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/dev/shm/mosh/protobuf-build-deps/gem2deb/gem2deb'
+rm -rf man/
+make[1]: Leaving directory '/dev/shm/mosh/protobuf-build-deps/gem2deb/gem2deb'
+   dh_clean
+FAKEROOTKEY=1588289663 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
+ debian/rules build
+dh build
+   dh_update_autotools_config
+   dh_autoreconf
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/dev/shm/mosh/protobuf-build-deps/gem2deb/gem2deb'
+Skipping tests for ruby2.5 as DEB_BUILD_OPTIONS contains 'nocheck'
+mkdir -p man/gem2deb man/gem2deb-test-runner
+for i in bin/*; do pod2man -c "" -r "" $i > man/gem2deb/$(basename $i).1; done
+mv man/gem2deb/gem2deb-test-runner.1 man/gem2deb-test-runner
+make[1]: Leaving directory '/dev/shm/mosh/protobuf-build-deps/gem2deb/gem2deb'
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   debian/rules override_dh_install
+make[1]: Entering directory '/dev/shm/mosh/protobuf-build-deps/gem2deb/gem2deb'
+dh_install -pgem2deb -Xgem2deb-test-runner -Xtest_runner.rb -Xmetadata.rb -Xtesttask.rb -Xspectask.rb -Xbanner.rb
+dh_install -pgem2deb-test-runner
+make[1]: Leaving directory '/dev/shm/mosh/protobuf-build-deps/gem2deb/gem2deb'
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_lintian
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: warning: Depends field of package gem2deb: substitution variable ${shlibs:Depends} used, but is not defined
+dpkg-gencontrol: warning: Depends field of package gem2deb-test-runner: substitution variable ${shlibs:Depends} used, but is not defined
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'gem2deb' in '../gem2deb_0.40_amd64.deb'.
+dpkg-deb: building package 'gem2deb-test-runner' in '../gem2deb-test-runner_0.40_amd64.deb'.
+FAKEROOTKEY=1108678689 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../gem2deb_0.40_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-source: info: using options from gem2deb/debian/source/options: --tar-ignore=.git
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian gem2deb_0.40_amd64.changes ...
+N: 1 tag overridden (1 warning)
+Finished running lintian.

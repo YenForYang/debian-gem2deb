@@ -1,0 +1,7 @@
+./man/gem2deb/dh-make-ruby.1
+./man/gem2deb/dh_ruby.1
+./man/gem2deb/dh_ruby_fixdepends.1
+./man/gem2deb/dh_ruby_fixdocs.1
+./man/gem2deb/gem2deb.1
+./man/gem2deb/gem2tgz.1
+./man/gem2deb/gen-ruby-trans-pkgs.1

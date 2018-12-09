@@ -1,0 +1,9 @@
+b9e7ef95ffd2c51fa413a00281cc3932  usr/bin/gem2deb-test-runner
+8707af5ae3ef4e495206e6fa7f459472  usr/lib/ruby/vendor_ruby/gem2deb/banner.rb
+37abcf3a34d634f1533ae5edc4cdee8e  usr/lib/ruby/vendor_ruby/gem2deb/metadata.rb
+e199627524d4fa8ae22d3c62cc85b80f  usr/lib/ruby/vendor_ruby/gem2deb/rake/spectask.rb
+b9fa7e2e04cf4fc3484980b39d0deb34  usr/lib/ruby/vendor_ruby/gem2deb/rake/testtask.rb
+f8db9e175288e3d7a2ea1245a309d261  usr/lib/ruby/vendor_ruby/gem2deb/test_runner.rb
+d2b92ad8b9e6094a20131bbce83004b7  usr/share/doc/gem2deb-test-runner/changelog.gz
+7123d0e708144d8b5737971fce64b063  usr/share/doc/gem2deb-test-runner/copyright
+fd582981a48c36bffe24ec82f704cb8e  usr/share/man/man1/gem2deb-test-runner.1.gz

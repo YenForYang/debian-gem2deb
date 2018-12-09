@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+<% if (@gem_name != 'simplegem') %>
+export GEM2DEB_TEST_RUNNER = --check-dependencies
+<% end %>
+
+%:
+	dh $@ --buildsystem=ruby --with ruby

@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Sat, 06 Oct 2018 12:29:14 -0300
+Source: gem2deb
+Binary: gem2deb gem2deb-test-runner
+Built-For-Profiles: nobiarch nocheck
+Architecture: amd64
+Version: 0.40
+Distribution: unstable
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Antonio Terceiro <terceiro@debian.org>
+Description:
+ gem2deb    - Debian Ruby packaging suite
+ gem2deb-test-runner - Debian Ruby packaging suite - tool to run tests
+Closes: 897289
+Changes:
+ gem2deb (0.40) unstable; urgency=medium
+ .
+   * Remove Vincent Fourmond from Uploaders: by his request (Closes: #897289)
+   * dh-make-ruby:
+     - debian/control: add `Rules-Requires-Root: no`
+     - debian/control: bump Standards-Version to 4.2.1
+   * Bump Standards-Version to 4.2.1; no changes needed otherwise
+Checksums-Sha1:
+ 9d53e4cb886c980c5d8fd98ba6c57d4889768993 21568 gem2deb-test-runner_0.40_amd64.deb
+ 5c32ab591b6303c5910b59f399cda74d1fb032c1 5605 gem2deb_0.40_amd64.buildinfo
+ dff0242f4ebad45e34ae2dfa618836d5cc4be8a7 58964 gem2deb_0.40_amd64.deb
+Checksums-Sha256:
+ bfed6dd8e467b0783c9e3c28f5613e1487ca893ac790ce9635300db1ad1fff2e 21568 gem2deb-test-runner_0.40_amd64.deb
+ 78467bdeb11e154c21461ccbae72725c71cb36b6b4cd525e86e4a0a14cb6da67 5605 gem2deb_0.40_amd64.buildinfo
+ 7406f6a078093549e98f46b3d3ec2e537eb01c213cea75bd2680f451c419eea5 58964 gem2deb_0.40_amd64.deb
+Files:
+ 6ffe8561b221b073e8cb65809b8f7cd0 21568 ruby optional gem2deb-test-runner_0.40_amd64.deb
+ 1d2c8e786c779fe4ae684c96dec90eda 5605 ruby optional gem2deb_0.40_amd64.buildinfo
+ 66d90d80c9faee4d49a2519708ad1f30 58964 ruby optional gem2deb_0.40_amd64.deb

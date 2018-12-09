@@ -1,0 +1,6 @@
+./bin/gem2deb-test-runner
+./lib/gem2deb/banner.rb
+./lib/gem2deb/metadata.rb
+./lib/gem2deb/rake/spectask.rb
+./lib/gem2deb/rake/testtask.rb
+./lib/gem2deb/test_runner.rb
